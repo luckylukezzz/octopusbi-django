@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+*.eggs/
+*.egg
+*.whl
+
+# Django
+*.log
+*.sqlite3
+db.sqlite3
+/media
+/staticfiles
+/static/
+.env
+*.env
+
+# Docker
+**/Dockerfile
+**/docker-compose.yml
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+*.iml
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# MacOS
+.DS_Store
+
+# Windows
+Thumbs.db
