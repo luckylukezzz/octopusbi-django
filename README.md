@@ -1,15 +1,21 @@
 create virtual env 
 ``
 pip install django
+``
+``
 pip install mysqlclient
 ``
 
 with docker 
 ``
 docker-compose up --build
+``
+``
 docker-compose exec web python manage.py makemigrations
-docker-compose exec web python manage.py migrate``
-
+``
+``
+docker-compose exec web python manage.py migrate
+``
 
 without docker
 ``
