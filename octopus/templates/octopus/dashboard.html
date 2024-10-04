@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>Database Dashboard</h2>
+    
+    <div class="nav nav-tabs mb-4">
+        <a class="nav-link {% if table_name == 'Schools' %}active{% endif %}" 
+           href="{% url 'table_view' 'schools' %}">Schools</a>
+           <a class="nav-link {% if table_name == 'Schools' %}active{% endif %}" 
+           href="{% url 'table_view' 'answer' %}">answer</a>
+           <a class="nav-link {% if table_name == 'Schools' %}active{% endif %}" 
+           href="{% url 'table_view' 'assess' %}">assessment areas</a>
+           <a class="nav-link {% if table_name == 'Schools' %}active{% endif %}" 
+           href="{% url 'table_view' 'award' %}">awards</a>
+           <a class="nav-link {% if table_name == 'Schools' %}active{% endif %}" 
+           href="{% url 'table_view' 'student' %}">student</a>
+           <a class="nav-link {% if table_name == 'Schools' %}active{% endif %}" 
+           href="{% url 'table_view' 'subject' %}">subject</a>
+        <!-- table links here -->
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                {% for school in schools %}
+                <tr>
+                    <td>{{ school.id }}</td>
+                    <td>{{ school.name }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

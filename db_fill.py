@@ -12,7 +12,7 @@ db_config = {
    
 }
 
-csv_file_path = './csvs/subject.csv'  
+csv_file_path = './csvs/student.csv'  
 table_name = os.path.splitext(os.path.basename(csv_file_path))[0]
 
 
